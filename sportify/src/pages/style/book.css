@@ -1,0 +1,10 @@
+.book {
+  min-height: 55vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+}
+.book-area {
+  margin-bottom: 15vh;
+}

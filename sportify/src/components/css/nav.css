@@ -1,0 +1,38 @@
+.self-nav {
+  background-color: #454545;
+  border-bottom: 0.1vh solid #f9ce80;
+}
+.btn {
+  border-color: #f9ce80;
+}
+.btn:hover {
+  background-color: #f9ce80;
+}
+.btn-color {
+  color: #f9ce80;
+}
+.logo {
+  width: 9vw;
+  height: 5vh;
+}
+.link-book {
+  color: white;
+  text-decoration: none;
+  font-weight: 350;
+  padding-right: 1.2vw;
+  font-size: 1.1rem;
+  padding-top: 0.6vh;
+}
+.link-book:hover {
+  cursor: pointer;
+  color: #f9ce80;
+}
+.user-name {
+  list-style: none;
+  text-decoration: none;
+  font-weight: 350;
+  padding-right: 1.2vw;
+  font-size: 1.1rem;
+  padding-top: 0.6vh;
+  color: white;
+}

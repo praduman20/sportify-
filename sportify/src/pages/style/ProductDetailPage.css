@@ -1,0 +1,105 @@
+.product-detail-container {
+  min-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12vh;
+  margin-bottom: 10vh;
+}
+
+.product-name {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #454545;
+}
+
+.left-body {
+  margin-right: 6vw;
+}
+
+.location {
+  margin-top: 2vh;
+  font-size: 1.2rem;
+}
+
+.img-book {
+  border-radius: 8px;
+  height: 50vh;
+  width: 50vw;
+}
+
+.sports {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+  border: 2px solid #f9ce80;
+  border-radius: 8px;
+  background-color: #f8f9f8;
+}
+
+.sports-name {
+  display: flex;
+  flex-direction: row;
+  padding-left: 2vw;
+  padding-bottom: 2vh;
+}
+
+.heading {
+  padding-left: 2vw;
+  padding-top: 1vh;
+}
+
+.name {
+  padding: 8px 8px;
+  margin: 1vh 1vh;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  background-color: #f9ce80;
+  color: white;
+}
+
+.timing {
+  font-size: 1.5rem;
+  border: 2px solid #f9ce80;
+  border-radius: 8px;
+  background-color: #f8f9f8;
+  font-family: cursive;
+}
+
+.time {
+  padding-top: 5px;
+  padding-left: 20px;
+}
+
+.map {
+  height: fit-content;
+  font-size: 1.5rem;
+  margin-top: 3vh;
+  border: 2px solid #f9ce80;
+  border-radius: 8px;
+  background-color: #f8f9f8;
+  font-family: cursive;
+}
+
+.map-item {
+  padding-top: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+.gmap {
+  height: 35vh;
+}
+
+.book-btn {
+  margin-top: 2vh;
+  background-color: #f9ce80;
+  color: white;
+  border: 2px solid #454545;
+}
+
+.book-btn:hover {
+  color: #454545;
+  border: 2px solid #454545;
+}

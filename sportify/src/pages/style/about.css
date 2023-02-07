@@ -1,0 +1,23 @@
+.body {
+  font-family: sans-serif;
+}
+
+.para {
+  font-size: 1.6em;
+}
+
+.about-logo {
+  height: 40vh;
+  width: 35vw;
+}
+
+.dev-text {
+  font-size: 1.2rem;
+}
+
+.about-para {
+  text-align: justify;
+}
+.about-btn:hover {
+  color: white;
+}

@@ -1,0 +1,41 @@
+.book-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #f9ce80;
+  border-radius: 8px;
+  padding: 2vh 2vh;
+  background-color: #f3fcfb;
+  font-family: sans-serif;
+}
+.city-form {
+  margin-top: 2vh;
+}
+.city-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+  align-items: center;
+  font-size: 1rem;
+}
+.city {
+  display: flex;
+  flex-direction: row;
+}
+.city-name {
+  margin: 1vh 1vh;
+  border: 2px solid #ebf1f4;
+  background-color: white;
+  padding: 1vh 2vh;
+  border-radius: 6px;
+}
+.city-name:hover {
+  cursor: pointer;
+}
+.intro {
+  color: #9bb8c0;
+}
+.input {
+  width: 20vw;
+}
