@@ -12,7 +12,7 @@ function body() {
   return (
     <>
       <div id="body">
-        <h1 className="header">Pportify</h1>
+        <h1 className="header">Sportify</h1>
         <h2 className="small-header">Eat.Sleep.Play.Repeat</h2>
       </div>
       <div id="info-body">
