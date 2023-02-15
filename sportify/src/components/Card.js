@@ -3,9 +3,10 @@ import styled from "styled-components";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
 import Logo from "../images/Court.webp";
+
 function Card() {
   return (
-    <Container>
+    <Container className="shadow">
       <Image>
         <img src={Logo} alt="turf-pic" />
       </Image>
@@ -36,6 +37,8 @@ const Container = styled.div`
   z-index: 10;
   border: 1px solid #f9ce80;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
 `;
 const Image = styled.div`
   width: 100%;

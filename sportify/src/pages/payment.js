@@ -74,7 +74,7 @@ function Payment() {
                 <Image>
                   <img src={Logo} alt="book-pic" />
                 </Image>
-                <Description>
+                <Description className="description">
                   <h2>Sporto Academy</h2>
                   <h4>Hola!!!You have selected the best venue.</h4>
 

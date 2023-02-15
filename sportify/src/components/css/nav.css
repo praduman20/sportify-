@@ -36,7 +36,15 @@
   padding-top: 0.6vh;
   color: white;
 }
+@media only screen and (max-width: 670px) {
+  .user-name {
+    display: none !important;
+  }
+}
 @media only screen and (max-width: 500px) {
+  .user-name {
+    display: none !important;
+  }
   .link-book {
     font-size: 0.9rem;
   }

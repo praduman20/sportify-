@@ -18,6 +18,10 @@
   margin-right: 6vw;
 }
 
+.right-body {
+  margin-right: 3vw;
+}
+
 .location {
   margin-top: 2vh;
   font-size: 1.2rem;
@@ -190,4 +194,29 @@
 
 .book-btn:hover i:nth-child(10) {
   transition-delay: calc(0.045s * 10);
+}
+
+@media only screen and (max-width: 630px) {
+  .product-detail-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-body {
+    margin-top: 2.5vh;
+    width: 89vw;
+    margin-left: 2vw;
+  }
+  .left-body {
+    margin: 0s;
+  }
+  .sports-name {
+    flex-direction: column;
+  }
+  .img-book {
+    width: 90vw;
+    height: 40vh;
+  }
+  .product-name {
+    font-size: 2rem;
+  }
 }

@@ -5,7 +5,6 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import "../pages/style/info.css";
-import { Link } from "react-router-dom";
 
 function Info() {
   const options = {
@@ -99,9 +98,6 @@ function Info() {
             }}
           />
         </div>
-        <Link to="/payment" className="btn button-home button py-3 px-5">
-          Go To Home
-        </Link>
       </Main>
     </Container>
   );

@@ -32,7 +32,9 @@ function Nav() {
                 Contact
               </Link>
               <li className="user-name">
-                {isAuthenticated && <p>Hi! {user.name}</p>}
+                {isAuthenticated && (
+                  <p className="auth-name">Hi! {user.name}</p>
+                )}
               </li>
               <div>
                 {isAuthenticated ? (

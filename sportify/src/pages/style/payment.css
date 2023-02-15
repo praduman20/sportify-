@@ -23,3 +23,9 @@
 .text-container span:not(hover) {
   transition: all 1s;
 }
+
+@media only screen and (max-width: 540px) {
+  .description {
+    display: none;
+  }
+}

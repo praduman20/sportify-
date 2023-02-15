@@ -7,12 +7,13 @@ import { GrLocation } from "react-icons/gr";
 import { BiCurrentLocation } from "react-icons/bi";
 import { GiAlarmClock } from "react-icons/gi";
 import Rating from "@mui/material/Rating";
+import Logo from "../images/Court.webp";
 import { Link } from "react-router-dom";
 
 const ProductDetailPage = (props) => {
   return (
     <div className="container product-detail-container">
-      <div className="left-body">
+      <div className="left-body container">
         <h1 className="product-name">
           Sporto Academy{" "}
           <Rating
@@ -25,11 +26,7 @@ const ProductDetailPage = (props) => {
         <p className="location">
           Marathahalli, Bangalore <GrLocation />
         </p>
-        <img
-          src="https://5.imimg.com/data5/SELLER/Default/2021/6/CX/CQ/AY/475165/football-turf-1000x1000.png"
-          alt="turf-pic"
-          className="img-book"
-        />
+        <img src={Logo} alt="turf-pic" className="img-book" />
         <div className="sports">
           <div>
             <h2 className="heading">
