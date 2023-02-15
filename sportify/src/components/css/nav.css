@@ -36,3 +36,11 @@
   padding-top: 0.6vh;
   color: white;
 }
+@media only screen and (max-width: 500px) {
+  .link-book {
+    font-size: 0.9rem;
+  }
+  .logo {
+    width: 15vw;
+  }
+}

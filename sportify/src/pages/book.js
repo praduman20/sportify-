@@ -17,10 +17,10 @@ function Book() {
       <div className="book-area">
         <Container>
           <Main>
-            <Card />
-            <Card1 />
-            <Card2 />
-            <Card3 />
+            <Card className="card" />
+            <Card1 className="card" />
+            <Card2 className="card" />
+            <Card3 className="card" />
           </Main>
         </Container>
       </div>
@@ -46,12 +46,12 @@ const Main = styled.div`
   grid-gap: 20px;
   /* Mobile */
   @media only screen and (max-width: 767px) {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(1, 70%);
     grid-gap: 0;
   }
   /* Tablets */
   @media only screen and (min-width: 767px) and (max-width: 1200px) {
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(2, 40%);
   }
   @media only screen and (min-width: 767px) {
     margin-top: -130px;

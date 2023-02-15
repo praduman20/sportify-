@@ -1,10 +1,17 @@
 .book {
-  min-height: 55vh;
+  min-height: 70vh;
   min-width: 100vw;
   display: flex;
   justify-content: center;
   margin-top: 15vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 .book-area {
   margin-bottom: 15vh;
+}
+@media only screen and (max-width: 770px) {
+  .book {
+    min-height: 50vh;
+  }
 }

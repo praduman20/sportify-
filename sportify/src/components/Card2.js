@@ -10,7 +10,7 @@ function Card() {
         <img src={Logo} alt="court-pic" />
       </Image>
       <Description>
-        <h5>FillHome Turfs</h5>
+        <h5>FeelHome Turfs</h5>
         <Rating
           name="half-rating-read"
           defaultValue={5}

@@ -1,0 +1,25 @@
+.text-container span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 11em;
+  height: 3.6em;
+  background-color: #f9ce80;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #454545;
+  border: 0.08em solid #454545;
+  box-shadow: 0 0.4em 0.12em 0.019em #454545;
+}
+
+.text-container span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #454545;
+}
+
+.text-container span:not(hover) {
+  transition: all 1s;
+}

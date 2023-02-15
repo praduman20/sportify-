@@ -9,10 +9,10 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div>
-      <footer className="footer-20192">
+      <footer className="footer">
         <div className="site-section">
           <div className="container">
-            <div className="cta d-block d-md-flex align-items-center px-5">
+            <div className="cta d-block d-md-flex align-items-center justify-content-between px-5">
               <div>
                 <h2 className="mb-0">Have a query?</h2>
                 <h3 className="text-dark">Let's sort that out!</h3>
@@ -23,10 +23,13 @@ function Footer() {
                 </Link>
               </div>
             </div>
-            <div className="row">
+            <div className="row res-links">
               <div className="col-sm">
-                <Link to="/" className="footer-logo">
-                  Sportify
+                <Link to="/" data-text="Awesome" className="footer-logo">
+                  <span class="actual-text">&nbsp;Sportify&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">
+                    &nbsp;Sportify&nbsp;
+                  </span>
                 </Link>
                 <p className="copyright">
                   <small>© 2023</small>
@@ -41,7 +44,7 @@ function Footer() {
                 </ul>
               </div>
               <div className="col-sm">
-                <h3>Contact</h3>
+                <h3>Want to contact?</h3>
                 <ul className="list-unstyled links">
                   <li>
                     <Link to="/contact">Contact us</Link>

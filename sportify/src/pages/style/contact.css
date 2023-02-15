@@ -203,12 +203,16 @@ input {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .screen-body {
     padding: 40px;
   }
 
   .screen-body-item {
     padding: 0;
+  }
+
+  .body-contact {
+    margin-top: 12vh;
   }
 }

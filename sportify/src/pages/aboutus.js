@@ -9,14 +9,14 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <>
-      <div>
+      <div className="main-about">
         <div className="bg-light">
           <div className="container">
             <div className="row h-20 align-items-center py-5">
               <div className="col-lg-6">
                 <h1 className="display-2">About us</h1>
                 <p className="lead text-muted mb-0">
-                  Sportify is the top sports activity facilitator in Bangalore.
+                  Sportify is a top sports activity facilitator in Bangalore.
                 </p>
                 <p className="lead text-muted">
                   We offer a one-stop shop for sports enthusiasts to find
@@ -25,7 +25,7 @@ function About() {
                   <strong>EAT.SLEEP.PLAY.REPEAT</strong>
                 </p>
                 <Link to="/" className="btn btn-sm py-3 px-5 about-btn">
-                  Go To Home
+                  <span>Go To Home</span>
                 </Link>
               </div>
               <div className="col-lg-6 d-none d-lg-block">

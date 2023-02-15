@@ -1,58 +1,103 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { InlineWidget } from "react-calendly";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+import { useCallback } from "react";
+import "../pages/style/info.css";
 
 function Info() {
+  const options = {
+    particles: {
+      number: {
+        value: 30,
+        density: {
+          enable: true,
+          value_area: 1000,
+        },
+      },
+      fullScreen: {
+        enable: true,
+        zIndex: -1,
+      },
+      color: {
+        value: "#f9ce80",
+      },
+      shape: {
+        type: "circle",
+        stroke: {
+          width: 0,
+          color: "#f9ce80",
+        },
+      },
+      opacity: {
+        value: 1,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 1,
+          opacity_min: 0.1,
+          sync: false,
+        },
+      },
+      size: {
+        value: 8,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 2,
+          size_min: 0.1,
+          sync: false,
+        },
+      },
+      line_linked: {
+        enable_auto: true,
+        distance: 100,
+        color: "#f9ce80",
+        opacity: 1,
+        width: 1,
+        condensed_mode: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 600,
+        },
+      },
+      move: {
+        enable: true,
+        speed: 1,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200,
+        },
+      },
+    },
+  };
+
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
   return (
     <Container>
+      <Particles options={options} init={particlesInit} />
       <Main>
-        <FormContainer>
-          <InputContainer>
-            <p>Full Name :</p>
-            <input type="text" placeholder="Enter your name" required />
-          </InputContainer>
-          <InputContainer>
-            <p>Phone Number :</p>
-            <input
-              type="text"
-              placeholder="Enter your contact number"
-              required
-            />
-          </InputContainer>
-          <InputContainer>
-            <p>Sport :</p>
-            <input
-              type="text"
-              placeholder="Enter the sport you want to play"
-              required
-            />
-          </InputContainer>
-          <InputContainer>
-            <p>Date :</p>
-            <input
-              type="date"
-              min={new Date().toISOString().split("T")[0]}
-              placeholder="Select the date"
-              required
-            />
-          </InputContainer>
-          <InputContainer>
-            <p>Time :</p>
-            <input type="time" placeholder="Select time" required />
-          </InputContainer>
-          <InputContainer>
-            <p>Duration (in hours) :</p>
-            <select id="cars" name="cars">
-              <option value="one">ONE</option>
-              <option value="two">TWO</option>
-              <option value="three">THREE</option>
-              <option value="four">FOUR</option>
-            </select>
-          </InputContainer>
-          <Link to="/payment">
-            <button>Proceed With The Payment</button>
-          </Link>
-        </FormContainer>
+        <div className="App">
+          <InlineWidget
+            url="https://calendly.com/sportifyservice12/book-a-venue"
+            pageSettings={{
+              backgroundColor: "ffffff",
+              hideEventTypeDetails: false,
+              hideLandingPageDetails: false,
+              primaryColor: "#f9ce80",
+              textColor: "454545",
+            }}
+          />
+        </div>
       </Main>
     </Container>
   );
@@ -63,7 +108,7 @@ const Container = styled.div`
   height: fit-content;
   max-width: 1400px;
   margin: auto;
-  background-color: rgb(234, 237, 237);
+  background-color: #ffffff;
   position: relative;
   margin-top: 12vh;
   margin-bottom: 12vh;
@@ -75,53 +120,4 @@ const Main = styled.div`
   border-radius: 8px;
 `;
 
-const FormContainer = styled.form`
-  border: 1px solid #f9ce80;
-  border-radius: 8px;
-  width: 55%;
-  min-width: 400px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  background-color: #fff;
-  margin: auto;
-  button {
-    align-self: flex-start;
-    height: 33px;
-    width: 250px;
-    margin-top: 20px;
-    background-color: #f9ce80;
-    border: none;
-    color: white;
-    outline: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    color: #454545;
-  }
-`;
-
-const InputContainer = styled.div`
-  width: 100%;
-  padding: 10px;
-  p {
-    font-size: 14px;
-    font-weight: 600;
-  }
-  input {
-    width: 95%;
-    height: 33px;
-    padding-left: 5px;
-    border-radius: 5px;
-    border: 1px solid lightgray;
-    margin-top: 5px;
-    &:hover {
-      border: 1px solid #f9ce80;
-    }
-  }
-`;
 export default Info;

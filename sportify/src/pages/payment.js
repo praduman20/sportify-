@@ -1,6 +1,7 @@
 import React from "react";
 import CurrencyFormat from "react-currency-format";
 import styled from "styled-components";
+import "../pages/style/payment.css";
 import Logo from "../images/Court.webp";
 import { BsCart3 } from "react-icons/bs";
 import { BiDetail } from "react-icons/bi";
@@ -105,9 +106,9 @@ function Payment() {
           >
             <div className="grey-circle"></div>
             <div className="text-container">
-              <p className="text">
+              <span className="text">
                 {isLoading ? "Loading..." : "Proceed to Pay"}
-              </p>
+              </span>
             </div>
           </button>
         </Subtotal>
@@ -225,18 +226,14 @@ const Subtotal = styled.div`
     }
   }
   button {
-    width: 65%;
-    height: 33px;
-    margin-top: 20px;
+    padding: 0.1em 0.25em;
+    width: 17.1em;
+    height: 5.8em;
     background-color: #f9ce80;
-    color: white;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    border: 2px solid #454545;
-  }
-  button:hover {
-    color: #454545;
+    margin-top: 20px;
+    border: 0.09em solid #454545;
+    border-radius: 0.3em;
+    font-size: 12px;
   }
 `;
 export default Payment;

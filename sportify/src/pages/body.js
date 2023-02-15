@@ -4,6 +4,10 @@ import { MdSportsTennis } from "react-icons/md";
 import { MdOutlineSportsCricket } from "react-icons/md";
 import { BsCaretRightFill } from "react-icons/bs";
 import Logo from "../images/info.png";
+import logo1 from "../images/ball.gif";
+import logo2 from "../images/chart.gif";
+import logo3 from "../images/location.gif";
+import logo4 from "../images/consultation.gif";
 import { AiFillStar } from "react-icons/ai";
 import { BiHappyBeaming } from "react-icons/bi";
 import "../pages/style/body.css";
@@ -11,9 +15,14 @@ import "../pages/style/body.css";
 function body() {
   return (
     <>
-      <div id="body">
-        <h1 className="header">Pportify</h1>
-        <h2 className="small-header">Eat.Sleep.Play.Repeat</h2>
+      <div id="body" data-testid="body-1">
+        <h1 className="header">Sportify</h1>
+        <h2 className="small-header">
+          <span>Eat.</span>
+          <span>Sleep.</span>
+          <span>Play.</span>
+          <span>Repeat.</span>
+        </h2>
       </div>
       <div id="info-body">
         <div>
@@ -24,23 +33,27 @@ function body() {
         </div>
         <div id="info-second">
           <div id="info-row">
-            <div className="info-column">
+            <div className="info-column-one">
               <div className="row-ele">
                 <BsCaretRightFill /> Play with your friends
+                <img src={logo4} alt="loading..." className="gif-logo" />
               </div>
               <div className="row-ele">
-                <BsCaretRightFill /> Book sports venue near you
+                <BsCaretRightFill /> Book sports venue
+                <img src={logo3} alt="loading..." className="gif-logo" />
               </div>
             </div>
             <div className="info-img">
               <img src={Logo} alt="Could not load" className="i-img" />
             </div>
-            <div className="info-column">
+            <div className="info-column-two">
               <div className="row-ele">
                 <BsCaretRightFill /> Skill up your game
+                <img src={logo2} alt="loading..." className="gif-logo" />
               </div>
               <div className="row-ele">
                 <BsCaretRightFill /> Pay online/Play offline
+                <img src={logo1} alt="loading..." className="gif-logo" />
               </div>
             </div>
           </div>
@@ -52,6 +65,18 @@ function body() {
           </div>
         </div>
       </div>
+      <div className="main-wrapper">
+        <div className="wrapper">
+          <iframe
+            src="https://share.synthesia.io/embeds/videos/85a423d1-715b-49db-b5df-26340b506972"
+            loading="lazy"
+            title="Synthesia video player - Your AI video"
+            allow="encrypted-media; fullscreen;"
+            // className="intro-video embed-responsive-item"
+          ></iframe>
+        </div>
+      </div>
+
       <div className="ratings">
         <p id="info-first">
           Verified by sportoholics <BiHappyBeaming />{" "}

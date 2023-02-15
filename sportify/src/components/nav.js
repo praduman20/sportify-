@@ -11,50 +11,52 @@ function Nav() {
 
   return (
     <>
-      <nav className="navbar bg-body-tertiary fixed-top self-nav">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            <img
-              src={Logo}
-              alt="Logo"
-              width={30}
-              height={24}
-              className="d-inline-block align-text-top logo"
-            />
-          </Link>
+      <div>
+        <nav className="navbar bg-body-tertiary fixed-top self-nav">
+          <div className="container-fluid res-nav">
+            <Link className="navbar-brand" to="/">
+              <img
+                src={Logo}
+                alt="Logo"
+                width={30}
+                height={24}
+                className="d-inline-block align-text-top logo"
+              />
+            </Link>
 
-          <form className="d-flex" role="search">
-            <Link to="/book" className="link-book">
-              Book
-            </Link>
-            <Link to="/contact" className="link-book">
-              Contact
-            </Link>
-            <li className="user-name">
-              {isAuthenticated && <p>Hi! {user.name}</p>}
-            </li>
-            <div>
-              {isAuthenticated ? (
-                <button
-                  className="btn btn-outline-success me-2 btn-color"
-                  type="button"
-                  onClick={() => logout({ returnTo: window.location.origin })}
-                >
-                  Log Out
-                </button>
-              ) : (
-                <button
-                  className="btn btn-outline-success me-2 btn-color"
-                  type="button"
-                  onClick={() => loginWithRedirect()}
-                >
-                  Login
-                </button>
-              )}
-            </div>
-          </form>
-        </div>
-      </nav>
+            <form className="d-flex res-form" role="search">
+              <Link to="/book" className="link-book">
+                Book
+              </Link>
+              <Link to="/contact" className="link-book">
+                Contact
+              </Link>
+              <li className="user-name">
+                {isAuthenticated && <p>Hi! {user.name}</p>}
+              </li>
+              <div>
+                {isAuthenticated ? (
+                  <button
+                    className="btn btn-outline-success me-2 btn-color"
+                    type="button"
+                    onClick={() => logout({ returnTo: window.location.origin })}
+                  >
+                    Log Out
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-outline-success me-2 btn-color"
+                    type="button"
+                    onClick={() => loginWithRedirect()}
+                  >
+                    Login
+                  </button>
+                )}
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
     </>
   );
 }

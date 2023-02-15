@@ -1,30 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../pages/style/contact.css";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
+import axios from "axios";
 import { toast } from "react-toastify";
+import CircularProgress from "@mui/material/CircularProgress";
+import { Modal } from "antd";
 
 function Contact() {
-  const form = document.querySelector(".contact-form");
-  const formSubmit = (event) => {
-    event.preventDefault();
-    toast.success(
-      "Your query has been registered. We will contact you shortly",
-      {
-        position: "top-center",
-        autoClose: 4000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      }
-    );
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [ok, setOk] = useState(false);
 
-    form.reset();
+  const handleSubmit = async (event) => {
+    setLoading(true);
+    event.preventDefault();
+    try {
+      const { data } = await axios.post(
+        `${process.env.REACT_APP_PUBLIC_API}/contact`,
+        {
+          name,
+          email,
+          phone,
+          message,
+        }
+      );
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+      setOk(data.ok);
+      setLoading(false);
+    } catch (err) {
+      toast.error(err.response.data);
+      setLoading(false);
+    }
   };
 
   const options = {
@@ -127,48 +142,75 @@ function Contact() {
                 </div>
                 <div className="screen-body-item">
                   <div className="app-form">
-                    <form className="contact-form" onSubmit={formSubmit}>
+                    <form className="contact-form" onSubmit={handleSubmit}>
                       <div className="app-form-group">
                         <input
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
                           type="text"
                           className="app-form-control"
                           placeholder="NAME"
-                          required
                         />
                       </div>
                       <div className="app-form-group">
                         <input
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          type="email"
                           className="app-form-control"
                           placeholder="EMAIL"
-                          required
                         />
                       </div>
                       <div className="app-form-group">
                         <input
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
+                          type="tel"
+                          id="phone"
+                          name="phone"
                           className="app-form-control"
                           placeholder="CONTACT NO"
-                          required
                         />
                       </div>
                       <div className="app-form-group message">
                         <input
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                          type="text"
                           className="app-form-control"
                           placeholder="MESSAGE"
-                          required
                         />
                       </div>
                       <div className="app-form-group buttons">
-                        <input
-                          type="submit"
-                          value="SEND"
-                          className="app-form-button"
-                        />
+                        {loading ? (
+                          <CircularProgress color="success" />
+                        ) : (
+                          <input
+                            type="submit"
+                            value="SEND"
+                            className="app-form-button"
+                          />
+                        )}
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <Modal
+              title="We got you covered :)"
+              visible={ok}
+              onCancel={() => setOk(false)}
+              footer={null}
+            >
+              <p>
+                Your query has been registered. We will contact you shortly.
+              </p>
+            </Modal>
           </div>
         </div>
       </div>

@@ -35,47 +35,87 @@ a:hover {
   height: 70vh;
 }
 
-.footer-20192 {
+.footer {
   position: relative;
   color: #fff;
-  padding: 7rem 0;
+  padding: 5rem 0;
   background-color: #454545;
 }
-.footer-20192 .container {
+.footer .container {
   position: relative;
 }
 .button {
   background-color: #454545;
   color: white;
-  margin-left: 50vw;
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+  outline: none;
 }
 .button:hover {
   color: #f9ce80;
   background-color: #454545;
+  animation: squeeze3124 0.9s both;
 }
-.footer-20192 h3 {
+@keyframes squeeze3124 {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.footer h3 {
   font-size: 16px;
   margin-bottom: 10px;
   margin-top: 0;
   line-height: 1.5;
 }
-.footer-20192 .links li {
+.footer .links li {
   margin-bottom: 10px;
   line-height: 1.5;
   display: block;
 }
-.footer-20192 .links li a {
+.footer .links li a {
   color: #666873;
 }
-.footer-20192 .links li a:hover {
+.footer .links li a:hover {
   color: #fff;
 }
-.footer-20192 .social li {
+.footer .social li {
   display: inline-block;
   position: relative;
   padding: 0.5vh 0.5vh;
 }
-.footer-20192 .social li a {
+.footer .social li a {
   position: relative;
   width: 40px;
   height: 40px;
@@ -91,7 +131,7 @@ a:hover {
   margin: 1.5vh 1.5vh;
   height: 2vh;
 }
-.footer-20192 .social li a > span {
+.footer .social li a > span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -99,16 +139,44 @@ a:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.footer-20192 .footer-logo {
+.footer .footer-logo {
   color: white;
   font-size: 20px;
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  --border-right: 6px;
+  --text-stroke-color: white;
+  --animation-color: #f9ce80;
+  letter-spacing: 3px;
+  text-decoration: none;
+  position: relative;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
 }
-.footer-20192 .copyright {
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+.footer-logo:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+.footer .copyright {
   color: #666873;
 }
-.footer-20192 .cta {
+.footer .cta {
   -webkit-box-shadow: -20px -20px 0 0 rgba(52, 58, 64, 0.2);
   box-shadow: -20px -20px 0 0 rgba(52, 58, 64, 0.2);
   padding: 20px;
@@ -116,10 +184,15 @@ a:hover {
   top: -150px;
   position: relative;
 }
-.footer-20192 .cta h2,
-.footer-20192 .cta h3 {
+.footer .cta h2,
+.footer .cta h3 {
   line-height: 1.5;
 }
-.footer-20192 .cta h3 {
+.footer .cta h3 {
   font-size: 20px;
+}
+@media screen and (max-width: 760px) {
+  .res-links {
+    padding-left: 15vw;
+  }
 }

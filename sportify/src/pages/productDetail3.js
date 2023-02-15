@@ -65,7 +65,16 @@ const ProductDetailPageThree = (props) => {
           </p>
         </div>
         <Link to="/info">
-          <button className="btn book-btn">BOOK NOW</button>
+          <button className="btn book-btn" alt="BOOK NOW">
+            <i>B</i>
+            <i>O</i>
+            <i>O</i>
+            <i>K</i>
+            <i>&nbsp;</i>
+            <i>N</i>
+            <i>O</i>
+            <i>W</i>
+          </button>
         </Link>
       </div>
     </div>
