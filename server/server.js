@@ -4,12 +4,13 @@ import cors from "cors";
 import { readdirSync } from "fs";
 
 const morgan = require("morgan");
-require("dotenv").config();
+require("dotenv").config({ path: "./config.env" });
+const DB = process.env.DATABASE;
 
 const app = express();
 
 mongoose
-  .connect(process.env.DATABASE, {
+  .connect(DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
