@@ -67,14 +67,7 @@ const ProductDetailPage = (props) => {
         </div>
         <Link to="/info">
           <button className="btn book-btn" alt="BOOK NOW">
-            <i>B</i>
-            <i>O</i>
-            <i>O</i>
-            <i>K</i>
-            <i>&nbsp;</i>
-            <i>N</i>
-            <i>O</i>
-            <i>W</i>
+            BOOK NOW
           </button>
         </Link>
       </div>

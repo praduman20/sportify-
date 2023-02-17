@@ -31,8 +31,8 @@ function Payment() {
   const checkoutOptions = {
     lineItems: [item],
     mode: "payment",
-    successUrl: `http://localhost:3000/`,
-    cancelUrl: `http://localhost:3000/`,
+    successUrl: `https://sportifybook.netlify.app`,
+    cancelUrl: `https://sportifybook.netlify.app`,
   };
 
   const redirectToCheckout = async () => {
