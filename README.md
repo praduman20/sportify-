@@ -8,7 +8,6 @@ Sportify is a sports venue booking app. The platform offers a one-stop shop for 
 2. Installation
 3. Tech Stack
 4. Features
-5. Authors
 6. License
 
 ## Demo
